@@ -2,13 +2,13 @@
 using Microsoft.Playwright;
 using NUnit.Framework;
 
-namespace ATFrameworkWithPlaywright
+namespace ATFrameworkWithPlaywright.DragAndDrop
 {
     [TestFixture]
-    public class DropDawnChooseSecondOption
+    public class DragAndDropDefaultValue
     {
         [Test]
-        public async Task CheckDefaultValue()
+        public async Task CheckDefaultState()
         {
             using var playwright = await Playwright.CreateAsync();
             await using var browser =
@@ -18,16 +18,11 @@ namespace ATFrameworkWithPlaywright
             {
                 ViewportSize = new ViewportSize {Width = 1920, Height = 1080}
             });
-            await page.GotoAsync("http://localhost:5000/dropdown");
+            await page.GotoAsync("http://localhost:5000/drag_and_drop");
             var title = await page.TextContentAsync("h3");
-            Assert.AreEqual("Dropdown List", title);
-            await page.EvaluateAsync(
-                "let dropdown = document.querySelector('#dropdown'); " +
-                "dropdown.options.selectedIndex = 2;" +
-                "let event = new Event('change'); " +
-                "dropdown.dispatchEvent(event);");
-            var actualOption = await page.TextContentAsync("option[selected='selected']");
-            Assert.AreEqual("Option 2", actualOption);
+            Assert.AreEqual("Drag and Drop", title);
+            var defaultOption = await page.TextContentAsync("#columns div:first-child");
+            Assert.AreEqual("A", defaultOption);
             await browser.CloseAsync();
         }
     }
