@@ -11,28 +11,18 @@ namespace ATFrameworkWithPlaywright.Tests
         protected IPage Page;
         
         [SetUp]
-        public void StartUp()
-        {
-            Initialize().Wait();
-        }
-
-        private async Task Initialize()
+        public async Task StartUp()
         {
             _playwright = await Playwright.CreateAsync();
             _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-                {Headless = false, SlowMo = 50, Devtools = true});
+                {Headless = false, SlowMo = 250, Devtools = true});
             Page = await _browser.NewPageAsync(new BrowserNewPageOptions
                 {ViewportSize = new ViewportSize {Width = 1920, Height = 1080}});
         }
 
 
         [TearDown]
-        public void ShutDown()
-        {
-            CloseBrowser().Wait();
-        }
-
-        private async Task CloseBrowser()
+        public async Task ShutDown()
         {
             await _browser.CloseAsync();
         }
