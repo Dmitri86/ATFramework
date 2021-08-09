@@ -10,7 +10,7 @@ namespace ATFrameworkWithPlaywright.LoginForm
         [Test]
         public async Task LoginWithCorrectDataTest()
         {
-            await Page.GotoAsync("http://localhost:5000/login");
+            await Page.GotoAsync(BaseUrl + "login");
             var title = await Page.TextContentAsync("h2");
             Assert.AreEqual("Login Page", title);
             await Page.TypeAsync("#username", "tomsmith");
