@@ -403,3 +403,7 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/ 
+
+# Allure
+ATFrameworkWithPlaywright/Allure-Reports/
+ATFrameworkWithPlaywright/Allure-Results/

@@ -1,9 +1,11 @@
 ﻿using System.Threading.Tasks;
 using ATFrameworkWithPlaywright.Tests;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 
 namespace ATFrameworkWithPlaywright.DragAndDrop
 {
+    [AllureNUnit]
     [TestFixture]
     public class DragAndDropSecondElement : BaseTestCase
     {

@@ -1,10 +1,12 @@
 ﻿using System.Threading.Tasks;
 using ATFrameworkWithPlaywright.Pages;
 using ATFrameworkWithPlaywright.Tests;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 
 namespace ATFrameworkWithPlaywright
 {
+    [AllureNUnit]
     [TestFixture]
     public class DropDawnChooseSecondOption : BaseTestCase
     {

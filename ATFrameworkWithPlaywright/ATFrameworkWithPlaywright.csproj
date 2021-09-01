@@ -11,6 +11,7 @@
       <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0-release-20210626-04" />
       <PackageReference Include="Microsoft.Playwright" Version="1.13.0" />
       <PackageReference Include="NUnit" Version="3.13.2" />
+      <PackageReference Include="NUnit.Allure" Version="1.0.14" />
       <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0-preview.6.21352.12" />
     </ItemGroup>
 
@@ -19,6 +20,11 @@
       <EmbeddedResource Include="appSettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Allure-Reports" />
+      <Folder Include="Allure-Results" />
     </ItemGroup>
 
 </Project>

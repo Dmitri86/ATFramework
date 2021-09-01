@@ -1,10 +1,12 @@
 ﻿using System.Threading.Tasks;
 using ATFrameworkWithPlaywright.Tests;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 
 namespace ATFrameworkWithPlaywright.DragAndDrop
 {
     [TestFixture]
+    [AllureNUnit]
     public class DragAndDropDefaultValue : BaseTestCase
     {
         [Test]
