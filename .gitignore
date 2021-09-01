@@ -407,3 +407,6 @@ ASALocalRun/
 # Allure
 ATFrameworkWithPlaywright/Allure-Reports/
 ATFrameworkWithPlaywright/Allure-Results/
+
+# Jenkins
+jenkins_home/
