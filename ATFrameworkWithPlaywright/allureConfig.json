@@ -1,0 +1,10 @@
+﻿{
+  "allure": {
+    "directory": "D:\\Net\\ATFrameworkWithPlaywright\\ATFrameworkWithPlaywright\\Allure-Results",
+    "links": [
+      "{link}",
+      "https://testrail.com/browse/{tms}",
+      "https://jira.com/browse/{issue}"
+    ]
+  }
+}
