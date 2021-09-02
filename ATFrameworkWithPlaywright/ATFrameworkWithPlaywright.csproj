@@ -12,6 +12,7 @@
       <PackageReference Include="Microsoft.Playwright" Version="1.13.0" />
       <PackageReference Include="NUnit" Version="3.13.2" />
       <PackageReference Include="NUnit.Allure" Version="1.0.14" />
+      <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
       <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0-preview.6.21352.12" />
     </ItemGroup>
 
